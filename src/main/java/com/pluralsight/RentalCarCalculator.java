@@ -1,6 +1,5 @@
 package com.pluralsight;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class RentalCarCalculator {
@@ -30,7 +29,7 @@ public class RentalCarCalculator {
         String roadSide = scanner.nextLine();
 
         //asked the user for their name.
-        System.out.println("What is your age? \n");
+        System.out.println("What is your age?");
         int age = scanner.nextInt();
 
         //calculates the daily price and the optional cost
@@ -44,21 +43,22 @@ public class RentalCarCalculator {
         if (Gps.equalsIgnoreCase("yes"))
             optionalCost += days * 2.95;
 
-        if (roadSide.equalsIgnoreCase("yes"));
+        if (roadSide.equalsIgnoreCase("yes"))
             optionalCost += days * 3.95;
 
         //double calculate
-        double underageSurchage = 0;
+        double underageSurcharge = 0;
         if (age < 25)
-            underageSurchage += basicRental * 0.30;
+            underageSurcharge += basicRental * 0.30;
 
         //Calculate the total cost.
-        double totalCost = basicRental + optionalCost + underageSurchage;
+        double totalCost = basicRental + optionalCost + underageSurcharge;
 
         //sout the total cost
+        System.out.println("");
         System.out.printf("Basic car rental: $%.2f%n", basicRental);
         System.out.printf("Options cost: $%.2f%n", optionalCost);
-        System.out.printf("Underage driver surcharge: $%.2f%n", underageSurchage);
+        System.out.printf("Underage driver surcharge: $%.2f%n", underageSurcharge);
         System.out.printf("Total cost: $%.2f%n", totalCost);
     }
 

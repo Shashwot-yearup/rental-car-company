@@ -6,7 +6,7 @@ public class RentalCarCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in); //created a scanner.
 
-        //asked the user for the pick up date
+        //asked the user for the pickup date
         System.out.println("What date would you like to pick up your car MM/DD/YYYY");
         String pickupDate = scanner.nextLine();
 
@@ -22,7 +22,7 @@ public class RentalCarCalculator {
 
         //asked the user if they want gps.
         System.out.println("Do you want a GPS for $2.95/day (yes/no)");
-        String Gps = scanner.nextLine();
+        String gps = scanner.nextLine();
 
         //asked the user if they want roadside assistance/
         System.out.println("Do you want roadside assistance for $3.95/day (yes/no)");
@@ -40,7 +40,7 @@ public class RentalCarCalculator {
         if (tollTag.equalsIgnoreCase("yes"))
             optionalCost += days * 3.95;
 
-        if (Gps.equalsIgnoreCase("yes"))
+        if (gps.equalsIgnoreCase("yes"))
             optionalCost += days * 2.95;
 
         if (roadSide.equalsIgnoreCase("yes"))

@@ -12,7 +12,7 @@ public class RentalCarCalculator {
         String pickupDate = scanner.nextLine();
 
         //asked the user for how many days they want to rent.
-        System.out.println("How many days do you want to rent the car");
+        System.out.println("How many days do you want to rent the car?");
         int days = scanner.nextInt();
         scanner.nextLine();
 
@@ -30,32 +30,36 @@ public class RentalCarCalculator {
         String roadSide = scanner.nextLine();
 
         //asked the user for their name.
-        System.out.println("What is your age?");
+        System.out.println("What is your age? \n");
         int age = scanner.nextInt();
 
         //calculates the daily price and the optional cost
         double basicRental = days * 29.99;
-        double optioalCost = 0;
+        double optionalCost = 0;
 
         // if statements to check if they want any optional stuff
         if (tollTag.equalsIgnoreCase("yes"))
-            optioalCost += days * 3.95;
+            optionalCost += days * 3.95;
 
         if (Gps.equalsIgnoreCase("yes"))
-            optioalCost += days * 2.95;
+            optionalCost += days * 2.95;
 
         if (roadSide.equalsIgnoreCase("yes"));
-            optioalCost += days * 3.95;
+            optionalCost += days * 3.95;
 
         //double calculate
         double underageSurchage = 0;
         if (age < 25)
             underageSurchage += basicRental * 0.30;
 
-        //Calcualted the total cost.
-        double totalCost = basicRental + optioalCost + underageSurchage;
+        //Calculate the total cost.
+        double totalCost = basicRental + optionalCost + underageSurchage;
 
-
+        //sout the total cost
+        System.out.printf("Basic car rental: $%.2f%n", basicRental);
+        System.out.printf("Options cost: $%.2f%n", optionalCost);
+        System.out.printf("Underage driver surcharge: $%.2f%n", underageSurchage);
+        System.out.printf("Total cost: $%.2f%n", totalCost);
     }
 
 }

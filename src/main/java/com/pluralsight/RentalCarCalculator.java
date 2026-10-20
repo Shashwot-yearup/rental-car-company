@@ -52,7 +52,11 @@ public class RentalCarCalculator {
         if (age < 25)
             underageSurchage += basicRental * 0.30;
 
+        //Calcualted the total cost.
+        double totalCost = basicRental + optioalCost + underageSurchage;
+
 
     }
+
 }
 
